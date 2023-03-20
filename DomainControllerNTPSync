@@ -1,0 +1,21 @@
+# Only PDC (primary domain controller) need to be sync to NTP
+# Remaining machines in domain will sync with PDC
+
+# Identify PDC in domain
+netdom query fsmo
+
+# Set PDC time sync to NTP
+Open regedit and navigate to Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Parameters
+Double click on NtpServer
+Input desired ntp server address and add 0x8 behind
+ie 0.pool.ntp.org,0x8
+
+# Update config using cmd prompt
+w32tm /config /update
+
+# Check config is set correctly, expect return to be 0.pool.ntp.org,0x8
+w32tm /query /source
+
+
+
+
