@@ -1,0 +1,2 @@
+# Using MSOL to enquire office 365 last password change and password age
+Get-MsolUser -userprincipalname user@domain.org | select DisplayName, LastPasswordChangeTimeStamp,@{Name=”PasswordAge”;Expression={(Get-Date)-$_.LastPasswordChangeTimeStamp}}
