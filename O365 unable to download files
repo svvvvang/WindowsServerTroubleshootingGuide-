@@ -1,0 +1,13 @@
+#device azure registered, unable to use web app. 
+
+1. dsregcmd /status (ensure is ad joined)
+2. remove current user key
+regedit
+HKLM\SOFTWARE\Microsoft\Enrollments
+remove user keys (not system keys)
+
+3. enroll using add work account again
+
+device should appear in aad and m365 admin center, and need some time to turn compliant
+
+aad intune and m365 need to show compliant in order or user to be able to download files
