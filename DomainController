@@ -1,0 +1,63 @@
+# Guide to upgrade domain controller
+
+
+# info 
+Active Directory defines five FSMO roles:
+  Schema master (1 per forest)
+  Domain naming master (1 per forest)
+  RID master (1 per domain role)
+  PDC master (1 per domain role)
+  Infrastructure master (1 per domain role)
+
+#Forest and domain functional levels
+When you deploy a new forest, you are prompted to set the forest functional level, and then set the domain functional level.
+domain functional level can be higher than the forest functional level, cannot set the domain functional level to a value that is lower than the forest functional level.
+
+
+#Raise the Domain Functional Level
+should not raise the domain functional level to a higher value if you plan to deploy any domain controllers running earlier versions of Windows Server
+
+ Active Directory Domains and Trusts
+In the console tree, right-click the domain for which you want to raise functional level, and then click Raise Domain Functional Level .
+In Select an available domain functional level , select the value and then click Raise .
+
+#To raise the forest functional level
+ Active Directory Domains and Trusts
+click Raise Forest Functional Level 
+Select an available forest functional level , select the value and then click Raise
+
+
+
+#Windows Server 2003 functional levels
+Supported domain controller operating systems:
+
+Windows Server 2016
+Windows Server 2012 R2
+Windows Server 2012
+Windows Server 2008 R2
+Windows Server 2008
+Windows Server 2003
+
+#Windows Server 2012 functional levels
+Supported domain controller operating systems:
+
+Windows Server 2022
+Windows Server 2019
+Windows Server 2016
+Windows Server 2012 R2
+Windows Server 2012
+
+#Windows Server 2012 R2 functional levels
+Supported domain controller operating systems:
+
+Windows Server 2022
+Windows Server 2019
+Windows Server 2016
+Windows Server 2012 R2
+
+#Windows Server 2016 functional levels
+Supported domain controller operating systems:
+
+Windows Server 2022
+Windows Server 2019
+Windows Server 2016
