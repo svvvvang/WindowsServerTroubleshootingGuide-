@@ -1,0 +1,8 @@
+#Creates local user and add to admin group
+#password will be prompted
+
+$password = read-host -assecurestring
+
+new-localuser -name 'username' -password $password -PasswordNeverExpires -fullname 'username' -description 'description'
+
+Add-LocalGroupMember -Group "Administrators" -Member "username"
