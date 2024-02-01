@@ -1,1 +1,18 @@
-#
+#go to dir
+cd c:\Windows\system32\inetsrv
+
+# run the following to back up config files
+appcmd add backup "xxx"
+
+
+# copy the backup folder to destination server
+# at destination server run cmd to list backups
+appcmd list backup
+
+# run below to restore back up to iis
+
+appcmd restore backup srviis1-backup-2019
+
+
+
+
