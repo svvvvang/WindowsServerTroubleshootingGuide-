@@ -4,3 +4,10 @@
 
 DISM.exe /online /Set-Edition:ServerDatacenter /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
 DISM.exe /online /Set-Edition:ServerStandard /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
+
+
+# Misc
+# get current edition
+dism /online /get-currentedition 
+# get editions that can be change to
+Type dism /online /get-targeteditions 
