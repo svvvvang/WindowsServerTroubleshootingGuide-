@@ -1,0 +1,7 @@
+# CIS hardening additional group policy for local gp (no domain)
+# As part of CIS window server hardening process, additional gp template have to be downloaded.
+# To apply policy on non domain joined pc
+# Download the admx files/ folder from source
+Change directory to C:\Windows\PolicyDefinitions\
+# Copy the new admx and adml files to C:\Windows\PolicyDefinitions\ and C:\Windows\PolicyDefinitions\en-US respectively
+
