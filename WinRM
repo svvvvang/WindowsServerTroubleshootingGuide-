@@ -1,0 +1,20 @@
+# Domain Controller GPO remote management via computer management
+client machine requires winrm quickconfig via cmd
+nework discovery is required to be on (can be configured in domain  GPO)
+
+
+GPO setting
+Computer Configuration --> poilcies --> Administrative Templates: Policy definition --> Windows Components --> Windows Remote Management (WinRM) --> WinRM Service --> Allow remote server anagement through WinRM 
+   Enabled with ipv4 filter
+
+Computer Configuration --> Preferences --> Control Panel Settings --> Services --> new services
+Startup - automatic
+service name - WinRM
+Service action - start service
+logon as - no change
+
+
+Computer Configuration --> poilcies --> Windows Settings --> Security Settings --> Windows Firewall with Advanced Security -->  Windows Firewall with Advanced Security --> Inbound rules
+  New rule --> Predefined --> Network discovery --> Select all --> Allow connection --> finsih
+
+
