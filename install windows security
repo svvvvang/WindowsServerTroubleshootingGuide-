@@ -1,0 +1,5 @@
+# Install windows security center
+# Fix windows virus and threat protection not launching
+# run command using powershell with admin rights
+
+Add-AppxPackage -Register -DisableDevelopmentMode "C:\Windows\SystemApps\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\AppXManifest.xml"
