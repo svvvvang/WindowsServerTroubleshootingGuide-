@@ -1,0 +1,4 @@
+#Clicking Windows virus and threat protection does not run the program.
+
+#using powershell with admin rights run the following command and restart pc.
+Add-AppxPackage -Register –DisableDevelopmentMode "C:\Windows\SystemApps\Microsoft.Windows.SecHealthUI_cw5n1h2txyewy\AppXManifest.xml"
